@@ -66,6 +66,24 @@
                 width: 100%;
             }
         }
+
+        /* Animation styles */
+        .click-animation {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff0000; /* Initial color, you can set it to any color */
+            animation: clickAnimation 0.5s ease-out;
+            pointer-events: none; /* Avoids interference with actual clicks */
+        }
+
+        @keyframes clickAnimation {
+            to {
+                transform: scale(5);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,26 +94,15 @@
 
 <main>
     <section class="course-list">
-        <div class="course" onclick="redirectToSubject('english')">
+        <a href="https://example.com" class="course">
             <h2>English</h2>
             <p>Explore free English courses and improve your language skills.</p>
-        </div>
-        <div class="course" onclick="redirectToSubject('english')">
-            <h2>English</h2>
-            <p>Explore free English courses and improve your language skills.</p>
-        </div>
-        <div class="course" onclick="redirectToSubject('english')">
-            <h2>English</h2>
-            <p>Explore free English courses and improve your language skills.</p>
-        </div>
-        <div class="course" onclick="redirectToSubject('english')">
-            <h2>English</h2>
-            <p>Explore free English courses and improve your language skills.</p>
-        </div>
-        <div class="course" onclick="redirectToSubject('english')">
-            <h2>English</h2>
-            <p>Explore free English courses and improve your language skills.</p>
-        </div>
+        </a>
+        <a href="math.html" class="course">
+            <h2>Mathematics</h2>
+            <p>Discover exciting math courses to enhance your problem-solving skills.</p>
+        </a>
+        <!-- Add more courses with appropriate href attributes -->
     </section>
 </main>
 
@@ -103,6 +110,25 @@
     function redirectToSubject(subject) {
         window.location.href = `subject.html?subject=${subject}`;
     }
+
+    // Function to handle the click animation
+    function handleAnimation(event) {
+        const clickAnimation = document.createElement("div");
+        clickAnimation.classList.add("click-animation");
+        clickAnimation.style.left = `${event.clientX}px`;
+        clickAnimation.style.top = `${event.clientY}px`;
+        document.body.appendChild(clickAnimation);
+
+        // Remove the animation element after the animation completes
+        clickAnimation.addEventListener("animationend", () => {
+            clickAnimation.remove();
+        });
+    }
+
+    // Attach handleAnimation to the document body's onclick event
+    document.body.addEventListener("click", handleAnimation);
+
 </script>
+
 </body>
 </html>
