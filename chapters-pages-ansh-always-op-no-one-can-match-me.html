@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Courses - Learn Anytime, Anywhere</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            width: 200px; /* Adjust the size as needed */
+            display: block;
+            margin: 0 auto;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            width: 48%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .course h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .course p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .course:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .course {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://ansh-yadav-maths-lover.github.io/Ansh-Books/screen.png" alt="Logo">
+</header>
+
+<main>
+    <section class="course-list">
+        <div class="course" onclick="redirectToSubject('english')">
+            <h2>English</h2>
+            <p>Explore free English courses and improve your language skills.</p>
+        </div>
+        <div class="course" onclick="redirectToSubject('english')">
+            <h2>English</h2>
+            <p>Explore free English courses and improve your language skills.</p>
+        </div>
+        <div class="course" onclick="redirectToSubject('english')">
+            <h2>English</h2>
+            <p>Explore free English courses and improve your language skills.</p>
+        </div>
+        <div class="course" onclick="redirectToSubject('english')">
+            <h2>English</h2>
+            <p>Explore free English courses and improve your language skills.</p>
+        </div>
+        <div class="course" onclick="redirectToSubject('english')">
+            <h2>English</h2>
+            <p>Explore free English courses and improve your language skills.</p>
+        </div>
+    </section>
+</main>
+
+<script>
+    function redirectToSubject(subject) {
+        window.location.href = `subject.html?subject=${subject}`;
+    }
+</script>
+</body>
+</html>
