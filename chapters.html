@@ -1,132 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Courses - Learn Anytime, Anywhere</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapters-An Ansh Books Company</title>
+  <link rel="shortcut icon" type="image/x-icon" href="ansh-logo.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* Remove the background color to allow the background image to show */
+      background-color: transparent;  
 
-        header {
-            text-align: center;
-        }
+      /* Set the background image here */
+      background-image: url("https://th.bing.com/th/id/R.b0941ae049cfe1242b875ee0ea722236?rik=TmhTt6vbVP7Rsg&riu=http%3a%2f%2fwww.lionleaf.com%2fwp-content%2fuploads%2f2014%2f11%2f1415275_22821821.jpg&ehk=7bK0H1iqq%2fkS48m0bbON6BfPoegjSZFfXu%2bC3ztcrvI%3d&risl=&pid=ImgRaw&r=0");  
 
-        header img {
-            width: 200px; /* Adjust the size as needed */
-            display: block;
-            margin: 0 auto;
-        }
+      /* Adjust background properties as needed */
+      background-repeat: no-repeat;  /* Change to 'repeat' for repeating image */
+      background-position: center;  /* Adjust position (e.g., 'top left') */
+      background-size: cover;     /* Adjust image size (e.g., 'contain') */
+      color: #333;
+    }
 
-        main {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
+    header {
+      text-align: center;
+    }
 
-        .course-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+    header img {
+      width: 200px; /* Adjust the size as needed */
+      display: block;
+      margin: 0 auto;
+    }
 
-        .course {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px;
-            width: 48%;
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
 
-        .course h2 {
-            color: #3498db;
-            margin-bottom: 10px;
-        }
+    .course-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-        .course p {
-            color: #555;
-            font-size: 0.9rem;
-        }
+    .course {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 10px;
+      width: 48%;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .course:hover {
-            transform: scale(1.05);
-        }
+    .course h2 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
 
-        @media (max-width: 768px) {
-            .course {
-                width: 100%;
-            }
-        }
+    .course p {
+      color: #555;
+      font-size: 0.9rem;
+    }
 
-        /* Animation styles */
-        .click-animation {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #ff0000; /* Initial color, you can set it to any color */
-            animation: clickAnimation 0.5s ease-out;
-            pointer-events: none; /* Avoids interference with actual clicks */
-        }
+    .course:hover {
+      transform: scale(1.05);
+    }
 
-        @keyframes clickAnimation {
-            to {
-                transform: scale(5);
-                opacity: 0;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .course {
+        width: 100%;
+      }
+    }
+
+    /* Animation styles */
+    .click-animation {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ff0000; /* Initial color, you can set it to any color */
+      animation: clickAnimation 0.5s ease-out;
+      pointer-events: none; /* Avoids interference with actual clicks */
+    }
+
+    @keyframes clickAnimation {
+      to {
+        transform: scale(5);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="https://ansh-yadav-maths-lover.github.io/Ansh-Books/screen.png" alt="Logo">
+  <img src="https://ansh-yadav-maths-lover.github.io/Ansh-Books/screen.png" alt="Logo">
 </header>
 
 <main>
-    <section class="course-list">
-        <a href="https://example.com" class="course">
-            <h2>English</h2>
-            <p>Explore free English courses and improve your language skills.</p>
-        </a>
-        <a href="math.html" class="course">
-            <h2>Mathematics</h2>
-            <p>Discover exciting math courses to enhance your problem-solving skills.</p>
-        </a>
-        <!-- Add more courses with appropriate href attributes -->
+  <section class="course-list">
+    <a href="https://api.devjisu.com/?v=https://d1d34p8vz63oiq.cloudfront.net/2bfd9a2f-3837-472c-a537-dff00f021038/master.mpd" class="course">
+      <h2>English</h2>
+      <p>Explore free English courses and improve your language skills.</p>
+    </a>
+    <a href="https://madxabhiofficial-pw-drm-player-seven.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/2bfd9a2f-3837-472c-a537-dff00f021038/master.mpd" class="course">
+      <h2>Mathematics</h2>
+      <p>Discover exciting math courses to enhance your problem-solving skills.</p>
+    </a>
+
+    <a href="https://madxabhiofficial-pw-drm-player-seven.vercel.app/pw?link=https://d1d34p8vz63oiq.cloudfront.net/2bfd9a2f-3837-472c-a537-dff00f021038/master.mpd" class="course">
+      <h2>Test</h2>
+      <p>Discover exciting math courses to enhance your problem-solving skills.</p>
+    </a>
     </section>
 </main>
 
 <script>
-    function redirectToSubject(subject) {
-        window.location.href = `subject.html?subject=${subject}`;
-    }
+  function redirectToSubject(subject) {
+    window.location.href = `subject.html?subject=${subject}`;
+  }
 
-    // Function to handle the click animation
-    function handleAnimation(event) {
-        const clickAnimation = document.createElement("div");
-        clickAnimation.classList.add("click-animation");
-        clickAnimation.style.left = `${event.clientX}px`;
-        clickAnimation.style.top = `${event.clientY}px`;
-        document.body.appendChild(clickAnimation);
+  // Function to handle the click animation
+  function handleAnimation(event) {
+    const clickAnimation = document.createElement("div");
+    clickAnimation.classList.add("click-animation");
+    clickAnimation.style.left = `${event.clientX}px`;
+    clickAnimation.style.top = `${event.clientY}px`;
+    document.body.appendChild(clickAnimation);
 
-        // Remove the animation element after the animation completes
-        clickAnimation.addEventListener("animationend", () => {
-            clickAnimation.remove();
-        });
-    }
+    // Remove the animation element after the animation completes
+    clickAnimation.addEventListener("animationend", () => {
+      clickAnimation.remove();
+    });
+  }
 
-    // Attach handleAnimation to the document body's onclick event
-    document.body.addEventListener("click", handleAnimation);
+  // Attach handleAnimation to the document body's onclick event
+  document.body.addEventListener("click", handleAnimation);
 
 </script>
 
