@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,8 +67,8 @@
             transform: translateZ(20px); /* Adjust the translateZ value for the desired perspective effect */
         }
 
-        /* ... (rest of your styles) ... */
-                .widget {
+        /* Rest of your styles */
+        .widget {
             width: calc(48% - 20px);
             box-sizing: border-box;
             margin: 10px;
@@ -90,12 +89,17 @@
             object-fit: cover; /* Ensure the image covers the container */
         }
 
-         .widget p {
-            color: black;
-            margin-bottom: 10px;
-        }
-        
         .widget p {
+            color: black;
+            margin-bottom: 5px; /* Adjust the margin as needed */
+            font-size: 14px; /* Set the desired font size */
+        }
+
+        .widget p.description {
+            font-size: 12px; /* Set the desired font size */
+        }
+
+        .widget p:last-child {
             margin-top: auto;
             font-weight: bold;
         }
@@ -119,27 +123,23 @@
         }
     </style>
 </head>
-
 <body>
     <div class="title-container">
-        <img class="logo" src="image-assests/Ansh Books-app-transparent.png"
-            alt="Ansh Books Logo">
+        <img class="logo" src="image-assests/Ansh Books.svg" alt="Ansh Books Logo">
         <a href="https://anshbooks.weebly.com" target="_blank">
             <h2 class="title">Ansh Books</h2>
         </a>
     </div>
 
-    <!-- ... (rest of your HTML) ... -->
-  
-     <div class="container">
-    <div class="widget">
-      <a href="#" data-target="https://api.devjisu.com/?v=https://d1d34p8vz63oiq.cloudfront.net/6a9708df-0043-4a51-b20e-eaf5782ccb63/master.mpd">
-        <img src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6224bea9-5e7f-497b-8354-c07be6e78e72.png" alt="Image 1">
-        <p>Motion:1 Distance and Displacements</p>
-        <button class="play-button">Play Lecture</button>
-      </a>
-    </div>
-
+    <div class="container">
+        <div class="widget">
+            <a href="#" data-target="https://api.devjisu.com/?v=https://d1d34p8vz63oiq.cloudfront.net/6a9708df-0043-4a51-b20e-eaf5782ccb63/master.mpd">
+                <img src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/6224bea9-5e7f-497b-8354-c07be6e78e72.png" alt="Image 1">
+                <p>Motion:1 Distance and Displacements</p>
+               
+                <button class="play-button">Play Lecture</button>
+            </a>
+        </div>
     <div class="widget">
       <a href="#" data-target="https://api.devjisu.com/?v=https://d1d34p8vz63oiq.cloudfront.net/1fa5e3c7-0bfb-4e78-91ad-6a44206a2ff1/master.mpd">
         <img src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/b68ed4a4-d64b-477e-a7ea-51b5b3ed8786.png" alt="Image 2">
@@ -171,7 +171,7 @@
     <div class="widget">
       <a href="#" data-target="https://api.devjisu.com/?v=https://d1d34p8vz63oiq.cloudfront.net/ccf31dfe-446f-4006-8248-5d89a88786f5/master.mpd">
         <img src="https://d2bps9p1kiy4ka.cloudfront.net/5eb393ee95fab7468a79d189/a33537bb-0362-420f-8e06-e47d2d11bebd.png" alt="Image 5">
-        <p>Motion:5 Graphical Representation Of Motion</p>
+        <p><strong>Motion:5 Graphical Representation Of Motion</strong></p>
         <button class="play-button">Play Lecture</button>
       </a>
     </div>
@@ -222,6 +222,10 @@
       </a>
     </div>
 
+        <!-- More widgets -->
+
+    </div>
+
     <script>
         // Your existing script.js code
         document.addEventListener('DOMContentLoaded', function () {
@@ -252,5 +256,4 @@
         });
     </script>
 </body>
-
 </html>
