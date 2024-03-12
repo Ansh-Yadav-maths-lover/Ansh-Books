@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clickable Widgets</title>
     <link rel="stylesheet" href="style.css">
-
     <style>
         /* style.css */
         .title {
@@ -121,9 +120,24 @@
         .widget:hover .play-button {
             background-color: #005F7F;
         }
+
+        /* Add new style for background image */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            z-index: -1; /* Ensure it's behind other content */
+        }
     </style>
 </head>
 <body>
+    <!-- Background image container -->
+    <div class="background-image"></div>
+
+    <!-- Rest of your HTML code -->
     <div class="title-container">
         <img class="logo" src="image-assests/Ansh Books.svg" alt="Ansh Books Logo">
         <a href="https://anshbooks.weebly.com" target="_blank">
@@ -227,23 +241,19 @@
     </div>
 
     <script>
-        // Your existing script.js code
+              // Your existing JavaScript code
         document.addEventListener('DOMContentLoaded', function () {
-            // Array of image URLs
             const imageUrls = [
                 'https://anshishere.w3spaces.com/2.png'
             ];
 
-            // Function to set a random background image
             function setRandomBackgroundImage() {
                 const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-                document.body.style.backgroundImage = `url('${randomImageUrl}')`;
+                document.querySelector('.background-image').style.backgroundImage = `url('${randomImageUrl}')`;
             }
 
-            // Set random background image on page load
             setRandomBackgroundImage();
 
-            // Your existing click event listener
             const widgets = document.querySelectorAll('.widget');
 
             widgets.forEach(widget => {
